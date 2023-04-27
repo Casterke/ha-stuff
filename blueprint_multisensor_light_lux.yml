@@ -60,7 +60,7 @@ blueprint:
 
 trigger:
   - platform: state
-    entity_id: "{{ expand('group.' ~ motion_on_entity) | map(attribute='entity_id') | list }}"
+    entity_id: !input motion_on_entity
     from: 'off'
     to: 'on'
   - platform: state
