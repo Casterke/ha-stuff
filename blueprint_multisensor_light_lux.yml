@@ -82,6 +82,7 @@ action:
     - conditions:
       - condition: state
         entity_id: !input motion_on_entity
+        match: 'any'
         state: 'on'
       - condition: numeric_state
         entity_id: !input illuminance_entity
