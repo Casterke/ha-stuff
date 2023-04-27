@@ -80,7 +80,7 @@ condition:
 action:
   - choose:
     - conditions:
-      - condition: or 
+      - condition: or
         conditions:
           - condition: state
             entity_id: !input motion_on_entity
