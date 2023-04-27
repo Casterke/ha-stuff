@@ -80,9 +80,11 @@ condition:
 action:
   - choose:
     - conditions:
-      - condition: state
-        entity_id: !input motion_on_entity
-        state: 'on'
+      - condition: or 
+        conditions:
+          - condition: state
+            entity_id: !input motion_on_entity
+            state: 'on'
       - condition: numeric_state
         entity_id: !input illuminance_entity
         below: !input lux_trigger_value
